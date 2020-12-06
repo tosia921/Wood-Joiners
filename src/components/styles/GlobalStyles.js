@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import bodyBackground from '../../images/bodyBackground.jpg'
  
-const GlobalStyle = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
   body {
     background-image: 
         linear-gradient(
@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
   
 `;
  
-export default GlobalStyle;
+export default GlobalStyles;
 
 
 
