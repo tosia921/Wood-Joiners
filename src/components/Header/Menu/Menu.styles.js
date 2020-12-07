@@ -16,6 +16,7 @@ export const MenuContainer = styled.nav`
     display: flex;
     justify-content: center;
     align-items: center;
+    
     @media screen and (max-width: 768px) {
         background-image: none;
         background-color: gray;
@@ -25,6 +26,8 @@ export const MenuContainer = styled.nav`
         margin-top: -3rem;
         margin-right: -3rem;
         margin-left: -100%;
+        transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
+        transition: transform 0.3s ease-in-out;
     }
 
 `

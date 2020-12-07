@@ -10,6 +10,7 @@ export const LogoContainer = styled.div`
     background-repeat: no-repeat;
     height:7rem;
     width: 23rem;
+    z-index: 1000;
 
     @media screen and (max-width: 768px) {
         height:5rem;

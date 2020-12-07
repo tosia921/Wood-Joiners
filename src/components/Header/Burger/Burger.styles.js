@@ -9,7 +9,7 @@ export const StyledBurger = styled.div`
     height:4rem;
     width: 4rem;
     display:none;
-    z-index: 100;
+    z-index: 100;    
 
     @media screen and (max-width: 768px) {
         display: block;

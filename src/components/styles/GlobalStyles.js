@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import bodyBackground from '../../images/bodyBackground.jpg'
+import bodyBackground from '../../images/bodyBackground-min.jpg'
  
 const GlobalStyles = createGlobalStyle`
   body {
@@ -11,6 +11,7 @@ const GlobalStyles = createGlobalStyle`
         url(${bodyBackground});
     background-size: cover;
     background-repeat: repeat;
+    overflow-x: hidden;
 
     padding: 1.5rem calc((100vw - 1400px) / 2);
     @media screen and (max-width: 1400px) {
