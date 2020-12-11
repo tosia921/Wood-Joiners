@@ -3,14 +3,14 @@ import { bool } from 'prop-types';
 
 import { MenuContainer, NavMenuItem } from './Menu.styles';
 
-const Menu = ({open}) => {
+const Menu = ({open, setOpen}) => {
     return (
         <MenuContainer open={open}>
-            <NavMenuItem activeStyle={{color: '${({ theme }) => theme.PrimaryTextColor}'}} to="/">HOME</NavMenuItem>
-            <NavMenuItem to="/">ABOUT</NavMenuItem>
-            <NavMenuItem activeStyle={{color: '${({ theme }) => theme.PrimaryTextColor}'}} to="/Process">PROCESS</NavMenuItem>
-            <NavMenuItem to="/">PROJECTS</NavMenuItem>
-            <NavMenuItem to="/">CONTACT</NavMenuItem>
+            <NavMenuItem onClick={() => setOpen(!open)} activeStyle={{ color: "#DEA264" }} to="/">HOME</NavMenuItem>
+            <NavMenuItem onClick={() => setOpen(!open)} activeStyle={{ color: "#DEA264" }} to="/about">ABOUT</NavMenuItem>
+            <NavMenuItem activeStyle={{ color: "#DEA264" }} to="/process">PROCESS</NavMenuItem>
+            <NavMenuItem activeStyle={{ color: "#DEA264" }} to="/projects">PROJECTS</NavMenuItem>
+            <NavMenuItem onClick={() => setOpen(!open)} activeStyle={{ color: "#DEA264" }} to="/contact">CONTACT</NavMenuItem>
         </MenuContainer>
     )
 }

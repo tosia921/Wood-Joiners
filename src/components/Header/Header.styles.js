@@ -7,4 +7,5 @@ export const Nav = styled.nav`
     padding-top: 1.5rem;
     position: relative;
     z-index: 100;
+    
 `

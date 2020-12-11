@@ -37,6 +37,7 @@ export const NavMenuItem = styled(Link)`
     text-decoration: none;
     font-size: 2rem;
     margin-top: -3px;
+    transition: transform 0.1s ease-out;
     &:not(:last-child) {
         margin-right: 3rem;
     }
@@ -44,7 +45,7 @@ export const NavMenuItem = styled(Link)`
         color: ${({ theme }) => theme.SecondaryColor};
     }
     &:active {
-        color: ${({ theme }) => theme.SecondaryColor};
+        transform: translateY(2px);
     }
 
     @media screen and (max-width: 768px) {
