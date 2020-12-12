@@ -43,6 +43,7 @@ export const NavMenuItem = styled(Link)`
     }
     &:hover {
         color: ${({ theme }) => theme.SecondaryColor};
+        text-decoration: none;
     }
     &:active {
         transform: translateY(2px);
