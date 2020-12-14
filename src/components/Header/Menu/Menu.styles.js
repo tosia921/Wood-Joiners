@@ -36,6 +36,8 @@ export const NavMenuItem = styled(Link)`
     text-shadow: ${({ theme }) => theme.TextShadow};
     text-decoration: none;
     font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 0.3px;
     margin-top: -3px;
     transition: transform 0.1s ease-out;
     &:not(:last-child) {

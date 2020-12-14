@@ -17,12 +17,17 @@ export const HeroTextContainer = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 `
 
 export const StyledH1 = styled.h1`
     white-space: pre-line;
     text-align: center;
-    font-size: 8rem;
+    font-size: 6rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    line-height: 0.9;
     color: ${({ theme }) => theme.PrimaryTextColor};
     text-shadow: ${({ theme }) => theme.TextShadowBig};
+    margin-bottom: 3rem;
 `

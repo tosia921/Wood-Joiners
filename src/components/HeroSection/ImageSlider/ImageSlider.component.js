@@ -16,7 +16,7 @@ const ImageSlider = () => {
     return (
         <StyledImageSlider>
             <Carousel style={{'border-radius':"10px",'overflow':"hidden"}}>
-                <Carousel.Item style={{'position':"relative"}}>
+                <Carousel.Item>
                     <img style={{'height':"42rem"}} 
                         className="d-block w-100"  
                         src={pic1}

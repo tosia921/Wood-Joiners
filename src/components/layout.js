@@ -10,9 +10,9 @@ import Header from './Header/Header.component'
 const Layout = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <PageWrapper>
-        <GlobalStyles />
-        <Header/>
+        <Header />
         <main>{children}</main>
       </PageWrapper>
     </ThemeProvider>
