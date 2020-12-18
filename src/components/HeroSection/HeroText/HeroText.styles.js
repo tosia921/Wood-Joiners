@@ -30,4 +30,11 @@ export const StyledH1 = styled.h1`
     color: ${({ theme }) => theme.PrimaryTextColor};
     text-shadow: ${({ theme }) => theme.TextShadowBig};
     margin-bottom: 3rem;
+
+    @media screen and (max-width: 768px) {
+        font-size: 5rem;
+    }
+    @media screen and (max-width: 450px) {
+        font-size: 4rem;
+    }
 `

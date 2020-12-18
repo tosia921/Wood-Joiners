@@ -17,6 +17,11 @@ export const StyledButton = styled.button`
     border-radius: 30px;
     text-align: center;
     letter-spacing: 1.1px;
+
+    @media screen and (max-width: 768px) {
+        margin: 0 0.5rem;
+        font-size: 1.4rem;
+    }
     
     
     &:hover {

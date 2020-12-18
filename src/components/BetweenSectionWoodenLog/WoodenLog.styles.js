@@ -13,6 +13,17 @@ export const StyledLog = styled.div`
     left: 50%;
     transform: translate(-50%, 0);
     margin-top: 2rem;
-    filter: drop-shadow(0px 10px 13px -7px #000000); 
+    margin-left: -1rem;
+    filter: drop-shadow(0px 10px 13px -7px #000000);
+
+    @media screen and (max-width: 1024px) {
+        margin-top: 2rem;
+    } 
+
+    @media screen and (max-width: 768px) {
+        margin-top: -1rem;
+    } 
+
+  
 `
 

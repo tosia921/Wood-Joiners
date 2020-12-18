@@ -3,12 +3,12 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-import HeroSection from '../components/HeroSection/HeroSection.component'
+import AboutUs from '../components/AboutSection/About.component'
 
 const About = () => (
   <Layout>
     <SEO title="about" />
-    <HeroSection/>
+    <AboutUs/>
   </Layout>
 )
 
