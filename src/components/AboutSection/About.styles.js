@@ -36,21 +36,23 @@ export const GridContainer = styled.div`
   grid-template-rows: 1fr 1fr;
   gap: 2rem 2rem;
   height: fit-content;
+  justify-items: center;
+  align-items: center;
+
   grid-template-areas:
     "textArea1 StyledImg1"
     "StyledImg2 textArea2";
 
-    @media screen and (max-width: 768px) {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
-      grid-template-areas:
-        "textArea1" 
-        "StyledImg1"
-        "textArea2" 
-        "StyledImg2";
-      }
-      justify-items: center;
-      align-items: center;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "textArea1" 
+      "StyledImg1"
+      "textArea2" 
+      "StyledImg2";
+    }
+ 
 
 `
 

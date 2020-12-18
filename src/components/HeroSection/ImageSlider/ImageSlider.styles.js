@@ -10,6 +10,4 @@ export const StyledImageSlider = styled.div`
 export const StyledImg = styled.img`
     margin-left: auto;
     margin-right: auto;
-    
-    height: 42rem;
 `
