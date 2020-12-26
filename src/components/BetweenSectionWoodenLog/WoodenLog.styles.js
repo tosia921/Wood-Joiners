@@ -1,19 +1,14 @@
 import styled from 'styled-components';
-import WoodImg from '../../images/woodSVG.svg';
+import WoodImg from '../../images/svgs/woodSVG.inline.svg';
 
-export const StyledLog = styled.div`
-    width: 80vw;
-    height: 12rem;
-    background-image: url(${WoodImg});
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+export const StyledLog = styled(WoodImg)`
+    width: 70vw;
+    height: 10rem;
     position: relative;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    margin-top: 2rem;
-    margin-left: -1rem;
+    margin-top: 7rem;
     filter: drop-shadow(0px 10px 13px -7px #000000);
 
     @media screen and (max-width: 1024px) {
