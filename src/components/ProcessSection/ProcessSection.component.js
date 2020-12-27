@@ -1,7 +1,5 @@
 import React from 'react';
 
-import Button from '../HeroSection/Buttons/Button.component';
-
 import { ProcessSectionContainer, SectionBanner, BannerText, GridContainer, Step1, Step2, Step3, Step4, SeeFullProcessLink,
          Step1Icon, Step1Text, Step2Icon, Step2Text, Step3Icon, Step3Text, Step4Icon, Step4Text, IconBackground  } from './ProcessSection.styles';
 
