@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { Carousel } from 'react-bootstrap';
 
 import WoodenBanner from '../../images/SectionBanners/sectionbanner4.png';
-import RatedPeopleimg from '../../images/RatedPeopleLogo.png';
+import RatedPeopleimg from '../../images/RatedPeopleLogo2.png';
+import Star from '../../images/svgs/star.inline.svg'
 
 export const SectionContainer = styled.div`
     height: fit-content;
@@ -35,12 +36,13 @@ export const BannerText = styled.h2`
     
 `
 export const StyledPtag = styled.p`
-    font-size: 3.5rem;
+    font-size: 4rem;
     font-weight: 500;
     color: ${({ theme }) => theme.PrimaryTextColor};
     text-shadow: ${({ theme }) => theme.TextShadowBig};
-    margin: 4rem 0;
+    margin: 1rem 0;
     letter-spacing: 1px;
+    text-align: center;
 `
 
 export const StyledCarousel = styled(Carousel)`
@@ -61,8 +63,8 @@ export const StyledCarouselItem = styled(Carousel.Item)`
 
 export const CustomerComment = styled.p`
 
-    width: 60%;
-    font-size: 2.3rem;
+    width: 70%;
+    font-size: 2rem;
     color: ${({ theme }) => theme.PrimaryTextColor};
     text-shadow: ${({ theme }) => theme.TextShadowBig};
     margin-left: auto;
@@ -73,21 +75,56 @@ export const CustomerComment = styled.p`
 export const CustomerName = styled.p`
     text-align: right;
     width: 75%;
-    margin-top: -1rem;
+    /* margin-top: -1rem; */
     font-size: 3rem;
     color: ${({ theme }) => theme.PrimaryTextColor};
     text-shadow: ${({ theme }) => theme.TextShadowBig};
 `
 
 export const RatedPeopleLogo = styled.div`
-    height: 30rem;
-    width: 30rem;
+    height: 7rem;
+    width: 7rem;
     background-image: url(${RatedPeopleimg});
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    
+`
+
+export const Stars = styled.div`
+    width: 40rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
+export const StarSVG = styled(Star)`
+    filter: drop-shadow( 1px 1px 2px rgba(0, 0, 0, .8));
+    height: 4rem;
+    width: 4rem;
+    margin-bottom: 0.4rem;
+    &:not(:last-child) {
+        margin-right: 1rem;
+    }
+
+`
+
+export const RatedPeopleContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: all 0.3s ease-in;
     &:hover {
         transform: scale(1.1);
+        text-decoration: none;
     }
+`
+
+export const RatedPeopleText = styled.p`
+    font-size: 8rem;
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;  
+    margin-top: 1rem;
+    color: ${({ theme }) => theme.PrimaryTextColor};
+    text-shadow: ${({ theme }) => theme.TextShadowBig};
 `
