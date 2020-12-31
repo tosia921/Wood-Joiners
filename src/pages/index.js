@@ -8,6 +8,7 @@ import WoodenLog from '../components/BetweenSectionWoodenLog/WoodenLog.component
 import AboutUs from '../components/AboutSection/About.component';
 import ProcessSection from '../components/ProcessSection/ProcessSection.component';
 import TestimonialSection from '../components/TestimonialsSection/TestimonialSection.component';
+import FeaturedProjectsSection from '../components/FeaturedProjectsSection/FeaturedProjectsSection.component';
 
 const IndexPage = () => (
   <Layout>
@@ -19,6 +20,8 @@ const IndexPage = () => (
     <ProcessSection/>
     <WoodenLog/>
     <TestimonialSection/>
+    <WoodenLog/>
+    <FeaturedProjectsSection/>
     <WoodenLog/>
   </Layout>
 )

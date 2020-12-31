@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionContainer, SectionBanner, BannerText, StyledPtag, StyledCarousel, StyledCarouselItem, CustomerComment, CustomerName, RatedPeopleLogo,
-         Stars, StarSVG, RatedPeopleContainer, RatedPeopleText } from './TestimonialSection.styles';
+         Stars, StarSVG, RatedPeopleContainer, RatedPeopleText, StyledPtag2 } from './TestimonialSection.styles';
 
 
 
@@ -40,7 +40,7 @@ const TestimonialSection = () => {
                 </StyledCarouselItem>
             </StyledCarousel>
 
-            <StyledPtag>CHECK OUR AMAZING</StyledPtag>
+            <StyledPtag2>CHECK OUR AMAZING</StyledPtag2>
             <Stars>
                 <StarSVG/>
                 <StarSVG/>
@@ -48,7 +48,7 @@ const TestimonialSection = () => {
                 <StarSVG/>
                 <StarSVG/>
             </Stars>
-            <StyledPtag>RATING AND COMMENTS AT:</StyledPtag>
+            <StyledPtag2>RATING AND COMMENTS AT:</StyledPtag2>
             <a href="#" style={{'text-decoration': 'none'}}>
                 <RatedPeopleContainer>
                     <RatedPeopleLogo/>

@@ -40,10 +40,17 @@ export const StyledPtag = styled.p`
     font-weight: 500;
     color: ${({ theme }) => theme.PrimaryTextColor};
     text-shadow: ${({ theme }) => theme.TextShadowBig};
-    margin: 1rem 0;
+    margin: 4rem 0;
     letter-spacing: 1px;
     text-align: center;
 `
+export const StyledPtag2 = styled(StyledPtag)`
+    margin: 1rem 0;
+    font-size: 3rem;
+    letter-spacing: 0;
+    
+`
+
 
 export const StyledCarousel = styled(Carousel)`
     width: 100%;
