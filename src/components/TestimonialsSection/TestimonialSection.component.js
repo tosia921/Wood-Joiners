@@ -49,7 +49,7 @@ const TestimonialSection = () => {
                 <StarSVG/>
             </Stars>
             <StyledPtag2>RATING AND COMMENTS AT:</StyledPtag2>
-            <a href="#" style={{'text-decoration': 'none'}}>
+            <a target="_blank" href="http://www.ratedpeople.com" rel="noreferrer" style={{'text-decoration': 'none'}}>
                 <RatedPeopleContainer>
                     <RatedPeopleLogo/>
                     <RatedPeopleText>ratedpeople.com</RatedPeopleText>

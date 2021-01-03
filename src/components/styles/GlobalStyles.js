@@ -3,6 +3,7 @@ import bodyBackground from '../../images/bodyBackground-min.jpg'
  
 const GlobalStyles = createGlobalStyle`
   body {
+    width: 100vw;
     background-image: 
         linear-gradient(
             rgba(0, 0, 0, 0.2), 
@@ -10,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
             ),
         url(${bodyBackground});
     background-size: cover;
-    background-repeat: repeat;
+    background-repeat: repeat-y;
     
     padding: 1.5rem calc((100vw - 1400px) / 2);
     @media screen and (max-width: 1400px) {

@@ -25,6 +25,6 @@ const IndexPage = () => (
     <WoodenLog/>
   </Layout>
 )
-
+ 
 export default IndexPage
 
