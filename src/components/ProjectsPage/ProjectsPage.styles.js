@@ -2,27 +2,42 @@ import styled from 'styled-components'
 
 export const ProjectsPageWrapper = styled.div`
     width: 100%;
-    height: 100rem;
+    height: fit-content;
 `
 export const SearchContainer = styled.ul`
     width: 100%;
     margin-top: 4rem;
 `
 
-export const SearchList = styled.div`
+export const SearchOptions = styled.div`
     display: flex;
     justify-content: space-evenly;
     list-style: none;
 `
 
-export const SearchItem = styled.li`
+export const SearchButton = styled.button`
     font-size: 3rem;
     color: ${({ theme }) => theme.PrimaryTextColor};
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+    &:hover {
+        color: ${({ theme }) => theme.SecondaryColor};
+    }
+    &:active,
+    &:visited,
+    &::selection {
+        color: ${({ theme }) => theme.SecondaryColor};
+        border: none;
+    }
 `
 export const ProjectsContainer = styled.div`
   display: grid;
-  grid-template-columns: 30rem 30rem 30rem;
-  grid-auto-rows: 30rem;
-  gap: 4em 4em;
+  grid-template-columns: 32rem 32rem 32rem;
+  grid-auto-rows: 32rem;
+  grid-gap: 4rem;
+  justify-content: center;
+  justify-items:center;
+  align-items:center;
+  margin-top: 5rem;
 `
