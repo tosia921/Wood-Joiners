@@ -26,9 +26,10 @@ export const SearchButton = styled.button`
     }
     &:active,
     &:visited,
-    &::selection {
+    &:focus {
         color: ${({ theme }) => theme.SecondaryColor};
         border: none;
+        outline: none;
     }
 `
 export const ProjectsContainer = styled.div`
@@ -40,4 +41,13 @@ export const ProjectsContainer = styled.div`
   justify-items:center;
   align-items:center;
   margin-top: 5rem;
+  
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 32rem 32rem;
+    grid-auto-rows: 32rem;
+  }
+  @media screen and (max-width: 700px) {
+    display: flex;
+    flex-direction: column;
+  }
 `

@@ -14,7 +14,7 @@ const ProjectsPage = () => {
         <ProjectsPageWrapper>
             <SearchContainer>
                 <SearchOptions>
-                    <SearchButton onClick={ () => updateSearchChoice(searchChoice = 'All')}>All</SearchButton>
+                    <SearchButton onClick={ () => updateSearchChoice(searchChoice = 'All') }>All</SearchButton>
                     <SearchButton onClick={ () => updateSearchChoice(searchChoice = 'New Floors')}>New Floors</SearchButton>
                     <SearchButton onClick={ () => updateSearchChoice(searchChoice = 'Renovated Floors')}>Renovated Floors</SearchButton>
                     <SearchButton onClick={ () => updateSearchChoice(searchChoice = 'Stairs')}>Stairs</SearchButton>
