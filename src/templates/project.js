@@ -1,45 +1,59 @@
-import React from 'react';
+import React from 'react'
 import { graphql } from 'gatsby';
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
+import { renderRichText } from "gatsby-source-contentful/rich-text"
 import { BLOCKS } from "@contentful/rich-text-types"
-import Layout from '../components/layout';
+
+import Layout from '../components/layout'
 
 
-const Project = ({data}) => {
-    const RichContent = JSON.parse(data.contentfulProject.projectContent.raw);
-    const options = {
-        renderNode: {
-            [BLOCKS.HEADING_1]: (node, children) => <h1>{children}</h1>,
-            // [BLOCKS.EMBEDDED_ASSET]:  <img src={`https:${data.contentfulProject.projectContent.references.fluid.src}`}/>,
-        },
+function ProjectTemplate({ data }) {
+  const {projectContent} = data.contentfulProject
+  console.log(projectContent)
+
+  const options = {
     renderMark: {},
-    }
-    console.log(data)
-    return (
-        <Layout>
-            
-            {documentToReactComponents(RichContent, options)}
-        </Layout>
-    )
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <p>{children}</p>,
+      [BLOCKS.EMBEDDED_ASSET]: node => {
+        return (
+            <img src={`https:${node.data.target.fixed.src}`}/>
+        )
+      },
+    },
+  }
+
+  return (
+    <div>
+      <Layout>
+      {renderRichText(projectContent, options)}
+      </Layout>
+    </div>
+  )
 }
 
-export default Project;
+export default ProjectTemplate
 
 export const query = graphql`
-    query($id: String!) {
-        contentfulProject(id: {eq: $id}) {
+  query($id: String!) {
+    contentfulProject(id: {eq: $id}) {
+                contentful_id
                 title
-                projectContent  {
-                    raw
-                    references {
-                            fluid {
-                                    src
-                                    
-                                }
-                        }
+                slug
+              projectContent {           
+                raw
+                references {
+                  ... on ContentfulAsset {
+                    contentful_id
+                    __typename
+                    fixed(width: 1600) {
+                      width
+                      height
+                      src
+                      srcSet
                     }
+                  }
                 }
+              }
             }
-        
-
+          }
 `
