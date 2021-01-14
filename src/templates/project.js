@@ -32,7 +32,7 @@ function ProjectTemplate({ data }) {
       [BLOCKS.HEADING_6]: (node, children) => <StyledH6>{children}</StyledH6>,
       [BLOCKS.EMBEDDED_ASSET]: node => {
         return (
-            <StyledImg src={`https:${node.data.target.fluid.src}`}/>
+            <StyledImg src={`https:${node.data.target.fluid.src}`} alt={node.data.target.description}/>
         )
       },
     },
@@ -58,6 +58,7 @@ export const query = graphql`
               projectContent {           
                 raw
                 references {
+                  description
                   ... on ContentfulAsset {
                     contentful_id
                     __typename
