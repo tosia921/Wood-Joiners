@@ -1,17 +1,11 @@
 import { createGlobalStyle } from 'styled-components';
-import bodyBackground from '../../images/bodyBackground-min.jpg'
+import bodyBackground from '../../images/wooden-background.jpg'
  
 const GlobalStyles = createGlobalStyle`
   body {
-    width: 100vw;
-    background-image: 
-        linear-gradient(
-            rgba(0, 0, 0, 0.2), 
-            rgba(0, 0, 0, 0.2)
-            ),
-        url(${bodyBackground});
+    
+    background: url(${bodyBackground}) repeat-y center center fixed;
     background-size: cover;
-    background-repeat: repeat-y;
     
     padding: 1.5rem calc((100vw - 1400px) / 2);
     @media screen and (max-width: 1400px) {
@@ -20,12 +14,10 @@ const GlobalStyles = createGlobalStyle`
     }
     
     }
-
     *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
     font-family: Teko, Helvetica, Sans-Serif;
     font-size: 62.5%;
     @media screen and (max-width: 768px) {
@@ -35,13 +27,8 @@ const GlobalStyles = createGlobalStyle`
         font-size: 50%;
     }
     }
-
     
   
 `;
  
 export default GlobalStyles;
-
-
-
-

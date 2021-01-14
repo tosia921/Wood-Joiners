@@ -5,5 +5,4 @@ export const PageWrapper = styled.div`
     margin: 0;
     padding: 0;
     height: fit-content;
-
 `
