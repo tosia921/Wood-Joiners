@@ -21,10 +21,10 @@ const GlobalStyles = createGlobalStyle`
     font-family: Teko, Helvetica, Sans-Serif;
     font-size: 62.5%;
     @media screen and (max-width: 768px) {
-        font-size: 40%;
+        font-size: 30%;
     }
     @media screen and (max-width: 1000px) {
-        font-size: 50%;
+        font-size: 40%;
     }
     }
     
