@@ -36,7 +36,7 @@ const ProcessSection = () => {
                     <Step4Text>Sit back! We do the rest...</Step4Text>
                 </Step4>
             </GridContainer>
-            <SeeFullProcessLink to="/about">Click to see full Process</SeeFullProcessLink>
+            <SeeFullProcessLink to="/process">Click to see full Process</SeeFullProcessLink>
         </ProcessSectionContainer>
     )
 }
