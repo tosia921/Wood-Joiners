@@ -12,6 +12,7 @@ export const SectionContainer = styled.div`
 export const BannerText = styled.h2`
     font-size: 3rem;
     font-weight: 600;
+    letter-spacing:0.3px;
     position: absolute;
     top: 57%;
     left: 50%;

@@ -16,18 +16,18 @@ export const SectionBanner = styled.div`
   background-size: contain;
   background-repeat: no-repeat;
   height: 20rem;
-  width: 30rem;
+  width: 40rem;
   position: relative;
 `
 
 export const BannerText = styled.h2`
-  font-size: 3.5rem;
+  font-size: 3.3rem;
   color: ${({ theme }) => theme.PrimaryTextColor};
   text-shadow: ${({ theme }) => theme.TextShadowBig};
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -73%);
+  transform: translate(-50%, -82%);
 `
 
 export const GridContainer = styled.div`

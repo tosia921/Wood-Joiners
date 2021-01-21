@@ -15,19 +15,20 @@ export const WoodenBanner = styled.div`
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
-    height: 20rem;
+    height: 15rem;
     width: 40rem;
     position: relative;
 `
 
 export const BannerText = styled.h2`
-    font-size: 3.5rem;
+    font-size: 3rem;
     color: ${({ theme }) => theme.PrimaryTextColor};
     text-shadow: ${({ theme }) => theme.TextShadowBig};
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -78%);
+    transform: translate(-50%, -85%);
+    font-weight: 600;
 `
 
 export const SectionContent = styled.div`

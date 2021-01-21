@@ -23,7 +23,7 @@ export const SectionBanner = styled.div`
     background-size: contain;
     background-repeat: no-repeat;
     height: 20rem;
-    width: 30rem;
+    width: 40rem;
     position: relative;
 `
 
@@ -35,7 +35,7 @@ export const BannerText = styled.h2`
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -25%);
+    transform: translate(-50%, -15%);
 `
 
 export const GridContainer = styled.div`

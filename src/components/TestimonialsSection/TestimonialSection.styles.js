@@ -25,7 +25,7 @@ export const SectionBanner = styled.div`
 `
 
 export const BannerText = styled.h2`
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 600;
     position: absolute;
     top: 50%;
