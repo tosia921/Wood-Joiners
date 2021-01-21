@@ -8,3 +8,4 @@ export const theme = {
     PrimaryButtonColor: '#6B4D30',
     SecondaryButtonColor: '#412C17',
 }
+

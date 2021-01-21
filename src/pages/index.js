@@ -10,6 +10,7 @@ import AboutUs from '../components/AboutSection/About.component';
 import ProcessSection from '../components/ProcessSection/ProcessSection.component';
 import TestimonialSection from '../components/TestimonialsSection/TestimonialSection.component';
 import FeaturedProjectsSection from '../components/FeaturedProjectsSection/FeaturedProjectsSection.component';
+import Contact from '../components/ContactSection/Contact.component';
 
 
 const IndexPage = () => (
@@ -25,6 +26,7 @@ const IndexPage = () => (
       <WoodenLog/>
       <FeaturedProjectsSection/>
       <WoodenLog/>
+      <Contact/>
     </Layout>
 )
  
