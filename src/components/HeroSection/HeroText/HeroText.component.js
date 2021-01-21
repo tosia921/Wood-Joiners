@@ -12,8 +12,8 @@ class HeroText extends React.Component {
         <HeroTextContainer>
             <StyledH1>{text}</StyledH1>
             <ButtonsContainer>
-                <Button text='Projects' primary to='/about'/>
-                <Button text='Contact' to='/about'/>
+                <Button text='Projects' primary to='/projects'/>
+                <Button text='Contact' to='/contact'/>
             </ButtonsContainer>
         </HeroTextContainer>
         )

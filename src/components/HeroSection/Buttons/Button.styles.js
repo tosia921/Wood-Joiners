@@ -6,10 +6,10 @@ import styled from 'styled-components';
 export const StyledButton = styled.button`
     
     background-color: ${({primary}) => primary ? '#6B4D30' : '#412C17'};
-    padding: 0.5rem 3rem;
+    padding: 0.8rem 4rem;
     color: ${({ theme }) => theme.PrimaryTextColor};
     box-shadow: ${({ theme }) => theme.ButtonBoxShadow};
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     outline: none;
     border: none;
     cursor: pointer;

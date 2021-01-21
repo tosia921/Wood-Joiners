@@ -23,7 +23,7 @@ export const HeroTextContainer = styled.div`
 export const StyledH1 = styled.h1`
     white-space: pre-line;
     text-align: center;
-    font-size: 6rem;
+    font-size: 8rem;
     font-weight: 600;
     letter-spacing: 3px;
     line-height: 0.9;
