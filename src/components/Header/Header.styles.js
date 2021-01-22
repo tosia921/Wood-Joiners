@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion'
 
-export const Nav = styled.nav`
+export const Nav = styled(motion.nav)`
     height: 80px;
     display: flex;
     justify-content: space-between;

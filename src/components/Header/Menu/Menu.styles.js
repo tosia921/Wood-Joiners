@@ -29,6 +29,7 @@ export const MenuContainer = styled.nav`
         transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
         transition: transform 0.3s ease-in-out;
     }
+    
 
 `
 export const NavMenuItem = styled(Link)`
