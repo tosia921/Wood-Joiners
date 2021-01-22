@@ -1,8 +1,17 @@
 import styled from 'styled-components';
 
 export const PageWrapper = styled.div`
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    height: fit-content;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 `
+
+export const StyledMain = styled.main`
+    flex-grow: 1;
+    padding: 0 calc((100vw - 1400px) / 2);
+    @media screen and (max-width: 1400px) {
+        padding: 1.5rem 3rem 0;
+        
+    }
+`
+
