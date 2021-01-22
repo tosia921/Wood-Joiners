@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import useForm from './useForm'
 import validate from './validateInfo';
+import { motion, AnimatePresence } from 'framer-motion'
 
 import { ContactSection, WoodenBanner, BannerText, SectionContent, ContactForm, HiddenField, StyledField, StyledForm, Styledlabel, StyledInput,
-         StyledTextArea, SubmitField, StyledSubmitButton, ContactDetails, Name, Email, Phone, StyledErrorMessage } from './Contact.styles';
+         StyledTextArea, SubmitField, StyledSubmitButton, ContactDetails, Name, Email, Phone, StyledErrorMessage, StyledSuccesMessage } from './Contact.styles';
 
 const Contact = () => {
 
@@ -22,7 +23,7 @@ const Contact = () => {
         </WoodenBanner>
             <SectionContent>
                 <ContactForm>
-                    <StyledForm method='post' name='contact'  onSubmit={handleSubmit} data-netflify='true' netlify-honeypot='bot'>
+                    <StyledForm method='post' name='contact'  onSubmit={handleSubmit} action="/thanks" data-netflify='true' netlify-honeypot='bot'>
                         <input type='hidden' name='form-name' value='contact'/>
                         <HiddenField>
                             <Styledlabel>Don't fill this out, human</Styledlabel>
@@ -47,13 +48,13 @@ const Contact = () => {
                             <StyledSubmitButton>Send</StyledSubmitButton>
                         </SubmitField>
                     </StyledForm>
+                    {isSubmitted && <StyledSuccesMessage>Your Email has been sent! Thank you</StyledSuccesMessage>}
                 </ContactForm>
                 <ContactDetails>
                     <Name>Jacek Pietrzykowski</Name>
                     <Email>j.m.pietrzykowski@gmail.com</Email>
                     <Phone>Phone: 0 700 800 900</Phone>
                 </ContactDetails>
-                {isSubmitted && <h2>Your Email has been sent! Thank you</h2>}
             </SectionContent>
     </ContactSection>
     )

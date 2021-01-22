@@ -8,6 +8,7 @@ export const ContactSection = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
 `
 
 export const WoodenBanner = styled.div`
@@ -36,6 +37,7 @@ export const SectionContent = styled.div`
     width: 100%;
 
     display: flex;
+    
 
     @media screen and (max-width: 768px) {
         flex-direction: column;
@@ -179,4 +181,9 @@ export const Phone = styled(Name)``
 export const StyledErrorMessage = styled.p`
     font-size: 2rem;
     color: red;
+`
+export const StyledSuccesMessage = styled.p`
+    font-size: 2rem;
+    color: green;
+    text-align: center;
 `

@@ -18,6 +18,14 @@ const useForm = (callback, validate) => {
         })
     }
 
+    const ClearForm = () => {
+        setValues({
+            name: '',
+            email: '',
+            message: ''
+        })
+    }
+
     const handleSubmit = e => {
         e.preventDefault();
 
@@ -28,7 +36,9 @@ const useForm = (callback, validate) => {
     useEffect(() => {
         if (Object.keys(errors).length === 0 && isSubmitting) {
         callback();
+        ClearForm();
         }
+        
     },[errors]);
 
     return{handleChange, values, handleSubmit, errors}
