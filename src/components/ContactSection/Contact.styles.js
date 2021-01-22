@@ -175,3 +175,8 @@ export const Name = styled.p`
 
 export const Email = styled(Name)``
 export const Phone = styled(Name)``
+
+export const StyledErrorMessage = styled.p`
+    font-size: 2rem;
+    color: red;
+`
