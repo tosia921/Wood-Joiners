@@ -10,16 +10,14 @@ import Footer from '../components/Footer/Footer.component'
 
 const Layout = ({ children }) => {
   return (
-    
     <ThemeProvider theme={theme}>
       <GlobalStyles />
-        <PageWrapper>
-            <Header />
-            <StyledMain>{children}</StyledMain>
-            <Footer/>
-        </PageWrapper>
+          <PageWrapper>
+              <Header />
+              <StyledMain>{children}</StyledMain>
+              <Footer/>
+          </PageWrapper>
     </ThemeProvider>
-    
   );
 }
 

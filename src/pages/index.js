@@ -12,7 +12,6 @@ import TestimonialSection from '../components/TestimonialsSection/TestimonialSec
 import FeaturedProjectsSection from '../components/FeaturedProjectsSection/FeaturedProjectsSection.component';
 import Contact from '../components/ContactSection/Contact.component';
 
-
 const IndexPage = () => (
     <Layout>
       <SEO title="Home" />
