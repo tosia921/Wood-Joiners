@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-// import { useStaticQuery, graphql } from "gatsby"
-
 import Projects from './Projects/Projects.component';
-
 import { ProjectsPageWrapper, SearchContainer, SearchOptions,SearchButton, ProjectsContainer } from './ProjectsPage.styles'
-
+//Animations
+import { container } from '../../framerMotionAnimations/animation';
 
 const ProjectsPage = () => {
 
@@ -21,7 +19,7 @@ const ProjectsPage = () => {
                     <SearchButton onClick={ () => updateSearchChoice(searchChoice = 'Other')}>Other</SearchButton>
                 </SearchOptions>
             </SearchContainer>
-            <ProjectsContainer>
+            <ProjectsContainer variants={container} initial="hidden" animate="show">
                 <Projects searchChoice={searchChoice}/>
             </ProjectsContainer>
             

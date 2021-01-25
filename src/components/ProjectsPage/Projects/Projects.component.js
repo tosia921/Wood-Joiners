@@ -1,7 +1,10 @@
 import React from 'react';
-import { useStaticQuery, graphql, navigate } from "gatsby"
+import { useStaticQuery, graphql, navigate } from "gatsby";
 
 import { ProjectDiv, TitleDiv, ProjectTitle  } from './Projects.styles';
+
+//Animations
+import { item } from '../../../framerMotionAnimations/animation';
 
 const Projects = ({searchChoice}) => {
 
@@ -34,6 +37,7 @@ if(searchChoice !== "All")
     return(
         data.allContentfulProject.edges.filter(edge => edge.node.projectType.typeName === searchChoice).map(edge => (
             <ProjectDiv 
+                variants={item}
                 key={edge.node.id} 
                 onClick={() => navigate(`/projects/${edge.node.slug}`)} 
                 style={{backgroundImage: `url(${edge.node.featuredImage.fluid.src})`}} 
@@ -46,7 +50,8 @@ if(searchChoice !== "All")
     )
     return (
         data.allContentfulProject.edges.map(edge => (
-            <ProjectDiv 
+            <ProjectDiv
+                variants={item} 
                 key={edge.node.id} 
                 onClick={() => navigate(`/projects/${edge.node.slug}`)} 
                 style={{backgroundImage: `url(${edge.node.featuredImage.fluid.src})`}} 

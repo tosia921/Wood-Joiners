@@ -6,7 +6,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     background: url(${bodyBackground}) repeat-y center center fixed;
     background-size: cover;
-    
+    overflow: hidden;
     padding-top: 1.5rem;
     
     

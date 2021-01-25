@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 
 export const TitleDiv = styled.div`
@@ -20,7 +21,7 @@ export const ProjectTitle = styled.h3`
     color: ${({ theme }) => theme.PrimaryTextColor};
 `
 
-export const ProjectDiv = styled.div`
+export const ProjectDiv = styled(motion.div)`
     width: 30rem;
     height: 30rem;
     position: relative;

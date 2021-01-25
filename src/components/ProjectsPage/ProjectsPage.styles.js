@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion';
 
 export const ProjectsPageWrapper = styled.div`
     width: 100%;
@@ -32,7 +33,7 @@ export const SearchButton = styled.button`
         outline: none;
     }
 `
-export const ProjectsContainer = styled.div`
+export const ProjectsContainer = styled(motion.div)`
   display: grid;
   grid-template-columns: 32rem 32rem 32rem;
   grid-auto-rows: 32rem;
