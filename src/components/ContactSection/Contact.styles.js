@@ -1,7 +1,9 @@
 import styled from 'styled-components';
-import WoodBanner from '../../images/SectionBanners/sectionbanner1.png'
+import WoodBanner from '../../images/SectionBanners/sectionbanner1.png';
+//Animations
+import { motion } from 'framer-motion';
 
-export const ContactSection = styled.section`
+export const ContactSection = styled(motion.section)`
     height: fit-content;
     width: 100%;
     display: flex;

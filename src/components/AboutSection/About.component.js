@@ -3,9 +3,14 @@ import pic1 from '../../images/HeroSliderImages/pic1.jpg';
 
 import {SectionContainer, SectionBanner, BannerText, GridContainer, TextArea1, TextArea2, StyledH3, StyledText, StyledImg1, StyledImg2  } from './About.styles';
 
+//Animations
+import { fadeInOutOnScroll } from '../../framerMotionAnimations/animation';
+import { useScroll } from '../../framerMotionAnimations/useScroll';
+
 const AboutUs = () => {
+    const [element, controls] = useScroll();
     return (
-        <SectionContainer>
+        <SectionContainer variants={fadeInOutOnScroll} ref={element} animate={controls} initial="hidden">
             <SectionBanner>
                 <BannerText>ABOUT US</BannerText>
             </SectionBanner>

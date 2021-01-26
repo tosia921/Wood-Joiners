@@ -1,11 +1,10 @@
 import React from 'react';
 import { StyledHeroSection } from './HeroSection.styles';
-
 import ImageSlider from './ImageSlider/ImageSlider.component';
 
 const HeroSection = () => {
     return (
-        <StyledHeroSection>
+        <StyledHeroSection >
             <ImageSlider/>
         </StyledHeroSection>
 

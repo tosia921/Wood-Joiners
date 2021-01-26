@@ -10,11 +10,13 @@ import pic1 from '../../../images/HeroSliderImages/pic1.jpg';
 import pic2 from '../../../images/HeroSliderImages/pic2.jpg';
 import pic3 from '../../../images/HeroSliderImages/pic3.jpg';
 
+//Animations
+import { pageAnimation } from '../../../framerMotionAnimations/animation';
 
 const ImageSlider = () => {
     
     return (
-        <StyledImageSlider>
+        <StyledImageSlider variants={pageAnimation} initial="hidden" animate="show">
             <Carousel style={{'border-radius':"10px",'overflow':"hidden"}}>
                 <Carousel.Item>
                     <img style={{'height':"42rem"}} 

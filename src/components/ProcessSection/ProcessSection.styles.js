@@ -8,8 +8,11 @@ import Handshake from "../../images/svgs/Handshake.inline.svg";
 import WorkTime from "../../images/svgs/WorkTime.inline.svg";
 import Budget from "../../images/svgs/Budget.inline.svg";
 
+//Animations
+import { motion } from 'framer-motion';
 
-export const ProcessSectionContainer = styled.div`
+
+export const ProcessSectionContainer = styled(motion.section)`
     display: flex;
     flex-direction: column;
     justify-content: center;

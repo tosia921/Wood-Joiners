@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 import WoodImg from '../../images/svgs/woodSVG.inline.svg';
+//Animations
+import { motion } from 'framer-motion';
+
+export const Wrapper = styled(motion.div)``
 
 export const StyledLog = styled(WoodImg)`
     width: 70vw;

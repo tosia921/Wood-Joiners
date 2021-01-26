@@ -3,10 +3,14 @@ import React from 'react';
 import { ProcessSectionContainer, SectionBanner, BannerText, GridContainer, Step1, Step2, Step3, Step4, SeeFullProcessLink,
          Step1Icon, Step1Text, Step2Icon, Step2Text, Step3Icon, Step3Text, Step4Icon, Step4Text, IconBackground  } from './ProcessSection.styles';
 
+//Animations
+import { fadeInOutOnScroll } from '../../framerMotionAnimations/animation';
+import { useScroll } from '../../framerMotionAnimations/useScroll';
 
 const ProcessSection = () => {
+    const [element, controls] = useScroll();
     return (
-        <ProcessSectionContainer>
+        <ProcessSectionContainer variants={fadeInOutOnScroll} ref={element} animate={controls} initial="hidden">
             <SectionBanner>
                 <BannerText>OUR PROCESS</BannerText>
             </SectionBanner>

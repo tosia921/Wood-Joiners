@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 import Wood from '../../images/StepsBackground.png'
+//Animations
+import { motion } from 'framer-motion';
 
-export const GridContainer = styled.div`
+export const GridContainer = styled(motion.section)`
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(5, 40rem);
@@ -39,59 +41,59 @@ export const GridContainer = styled.div`
 `
 ///////////////text area containers
 
-export const ImgContainer1 = styled.img`
+export const ImgContainer1 = styled(motion.img)`
     grid-area: Img1;
     height: 80%;
     width: 80%;
     object-fit: cover;
     
 `
-export const ImgContainer2 = styled.img`
+export const ImgContainer2 = styled(motion.img)`
     height: 80%;
     width: 80%;
     object-fit: cover;
     
 `
-export const ImgContainer3 = styled.img`
+export const ImgContainer3 = styled(motion.img)`
     height: 80%;
     width: 80%;
     object-fit: cover;
     
 `
-export const ImgContainer4 = styled.img`
+export const ImgContainer4 = styled(motion.img)`
     height: 80%;
     width: 80%;
     object-fit: cover;
     
 `
-export const ImgContainer5 = styled.img`
+export const ImgContainer5 = styled(motion.img)`
     height: 80%;
     width: 80%;
     object-fit: cover;
 `
 ///////////////Image containers
 
-export const TextArea1 = styled.div`
+export const TextArea1 = styled(motion.div)`
     grid-area: Text1;
     height: fit-content;
     width: 80%;
 `
-export const TextArea2 = styled.div`
+export const TextArea2 = styled(motion.div)`
     grid-area: Text2;
     height: fit-content;
     width: 80%;
 `
-export const TextArea3 = styled.div`
+export const TextArea3 = styled(motion.div)`
     grid-area: Text3;
     height: fit-content;
     width: 80%;
 `
-export const TextArea4 = styled.div`
+export const TextArea4 = styled(motion.div)`
     grid-area: Text4;
     height: fit-content;
     width: 80%;
 `
-export const TextArea5 = styled.div`
+export const TextArea5 = styled(motion.div)`
     grid-area: Text5;
     height: fit-content;
     width: 80%;

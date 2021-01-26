@@ -5,7 +5,10 @@ import WoodenBanner from '../../images/SectionBanners/sectionbanner4.png';
 import RatedPeopleimg from '../../images/RatedPeopleLogo2.png';
 import Star from '../../images/svgs/star.inline.svg'
 
-export const SectionContainer = styled.div`
+//Animations
+import { motion } from 'framer-motion';
+
+export const SectionContainer = styled(motion.section)`
     height: fit-content;
     display: flex;
     flex-direction: column;

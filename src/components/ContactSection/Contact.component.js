@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import useForm from './useForm'
 import validate from './validateInfo';
-import { motion, AnimatePresence } from 'framer-motion'
-
+//Styles
 import { ContactSection, WoodenBanner, BannerText, SectionContent, ContactForm, HiddenField, StyledField, StyledForm, Styledlabel, StyledInput,
          StyledTextArea, SubmitField, StyledSubmitButton, ContactDetails, Name, Email, Phone, StyledErrorMessage, StyledSuccesMessage } from './Contact.styles';
+//Animations
+import { fadeInOutOnScroll } from '../../framerMotionAnimations/animation';
+import { useScroll } from '../../framerMotionAnimations/useScroll';
 
 const Contact = () => {
-
+    const [element, controls] = useScroll();
     const [isSubmitted, setIsSubmitted] = useState(false);
 
     function submitForm() {
@@ -17,7 +19,7 @@ const Contact = () => {
     const {handleChange, values, handleSubmit, errors} = useForm(submitForm, validate);
 
     return (
-        <ContactSection>
+        <ContactSection variants={fadeInOutOnScroll} ref={element} animate={controls} initial="hidden">
         <WoodenBanner>
             <BannerText>CONTACT US</BannerText>
         </WoodenBanner>

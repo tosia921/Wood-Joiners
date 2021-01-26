@@ -19,5 +19,6 @@ export const StyledBurger = styled.div`
         transform: translate(0, 45%);
         font-size: 1.8rem;
         cursor: pointer;
+        margin-right: 3rem;
     }
 `

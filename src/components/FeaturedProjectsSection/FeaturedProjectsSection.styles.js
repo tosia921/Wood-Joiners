@@ -2,7 +2,10 @@ import styled from 'styled-components';
 import WoodenBanner from '../../images/SectionBanners/sectionbanner3.png'
 import { Link } from 'gatsby'
 
-export const SectionContainer = styled.div`
+//Animations
+import { motion } from 'framer-motion';
+
+export const SectionContainer = styled(motion.section)`
     height: fit-content;
     display: flex;
     flex-direction: column;

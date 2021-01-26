@@ -4,6 +4,7 @@ export const PageWrapper = styled.div`
     display: flex;
     min-height: 100vh;
     flex-direction: column;
+    overflow: hidden;
 `
 
 export const StyledMain = styled.main`

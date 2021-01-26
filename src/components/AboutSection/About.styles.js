@@ -1,9 +1,10 @@
-// SectionContainer, SectionBanner, BannerText, GridContainer, TextArea, StyledH3, StyledText
-
 import styled from 'styled-components';
 import AboutUsBanner from '../../images/SectionBanners/sectionbanner1.png'
 
-export const SectionContainer = styled.div`
+//Animations
+import { motion } from 'framer-motion';
+
+export const SectionContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;

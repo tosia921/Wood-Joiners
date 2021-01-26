@@ -15,7 +15,7 @@ export const pageAnimation = {
 export const headerAnimation = {
     hidden: {
         opacity: 0,
-        y:-300
+        y:-100
     },
     show: {
         opacity: 1,
@@ -23,6 +23,16 @@ export const headerAnimation = {
         transition: {
             duration: 1,
         }
+    }
+}
+
+export const fadeInOutOnScroll = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        duration: 0.7
+      }
     }
 }
 

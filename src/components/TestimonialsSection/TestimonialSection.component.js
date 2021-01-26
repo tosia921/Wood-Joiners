@@ -2,13 +2,16 @@ import React from 'react';
 import { SectionContainer, SectionBanner, BannerText, StyledPtag, StyledCarousel, StyledCarouselItem, CustomerComment, CustomerName, RatedPeopleLogo,
          Stars, StarSVG, RatedPeopleContainer, RatedPeopleText, StyledPtag2 } from './TestimonialSection.styles';
 
+//Animations
+import { fadeInOutOnScroll } from '../../framerMotionAnimations/animation';
+import { useScroll } from '../../framerMotionAnimations/useScroll';
 
 
 
 const TestimonialSection = () => {
-
+    const [element, controls] = useScroll();
     return (
-        <SectionContainer>
+        <SectionContainer variants={fadeInOutOnScroll} ref={element} animate={controls} initial="hidden">
 
             <SectionBanner>
                 <BannerText>WHAT PEOPLE SAY</BannerText>
