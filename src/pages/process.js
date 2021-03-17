@@ -1,13 +1,13 @@
-import React from 'react';
-import Layout from '../components/layout';
-import Process from '../components/ProcessPage/Process.component'
+import React from "react"
+import Layout from "../components/layout"
+import Process from "../components/ProcessPage/Process.component"
 
 const ProcessPage = () => {
-    return (
-        <Layout>
-            <Process/>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <Process />
+    </Layout>
+  )
 }
 
-export default ProcessPage;
+export default ProcessPage

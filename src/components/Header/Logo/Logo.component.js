@@ -1,13 +1,13 @@
-import React from "react";
+import React from "react"
 
-import { LogoContainer, StyledLogo } from './Logo.styles';
+import { LogoContainer, StyledLogo } from "./Logo.styles"
 
 const Logo = () => {
-    return (
-        <LogoContainer>
-            <StyledLogo>MJ Joiners</StyledLogo>
-        </LogoContainer>
-    )
+  return (
+    <LogoContainer>
+      <StyledLogo>MJ Joiners</StyledLogo>
+    </LogoContainer>
+  )
 }
 
-export default Logo;
+export default Logo

@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import AboutUsBanner from '../../images/SectionBanners/sectionbanner1.png'
+import styled from "styled-components"
+import AboutUsBanner from "../../images/SectionBanners/sectionbanner1.png"
 
 //Animations
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion"
 
 export const SectionContainer = styled(motion.div)`
   display: flex;
@@ -48,13 +48,11 @@ export const GridContainer = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-template-areas:
-      "textArea1" 
+      "textArea1"
       "StyledImg1"
-      "textArea2" 
+      "textArea2"
       "StyledImg2";
-    }
- 
-
+  }
 `
 
 export const TextArea1 = styled.div`
@@ -68,7 +66,7 @@ export const StyledH3 = styled.h3`
   font-size: 4rem;
   font-weight: 600;
   color: ${({ theme }) => theme.PrimaryTextColor};
-  text-shadow: ${({ theme }) => theme.TextShadowBig}; 
+  text-shadow: ${({ theme }) => theme.TextShadowBig};
 
   @media screen and (max-width: 768px) {
     text-align: center;

@@ -1,7 +1,6 @@
-import { createGlobalStyle } from 'styled-components';
-import bodyBackground from '../../images/wooden-background.jpg'
+import { createGlobalStyle } from "styled-components"
+import bodyBackground from "../../images/wooden-background.jpg"
 
- 
 const GlobalStyles = createGlobalStyle`
   body {
     background: url(${bodyBackground}) repeat-y center center fixed;
@@ -25,6 +24,6 @@ const GlobalStyles = createGlobalStyle`
     }
     
   
-`;
- 
-export default GlobalStyles;
+`
+
+export default GlobalStyles

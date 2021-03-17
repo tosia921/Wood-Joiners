@@ -1,4 +1,3 @@
-
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
 })
@@ -31,9 +30,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `teko\:400,600,700`
-        ]
+        fonts: [`teko\:400,600,700`],
       },
     },
     {
@@ -44,12 +41,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-react-svg',
+      resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: /\.inline\.svg$/
-        }
-      }
+          include: /\.inline\.svg$/,
+        },
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
