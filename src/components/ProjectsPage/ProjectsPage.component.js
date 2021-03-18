@@ -12,13 +12,14 @@ import { container } from "../../framerMotionAnimations/animation"
 
 const ProjectsPage = () => {
   let [searchChoice, updateSearchChoice] = useState("All")
-
+  console.log(searchChoice)
   return (
     <ProjectsPageWrapper>
       <SearchContainer>
         <SearchOptions>
           <SearchButton
             onClick={() => updateSearchChoice((searchChoice = "All"))}
+            
           >
             All
           </SearchButton>

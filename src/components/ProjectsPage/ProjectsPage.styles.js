@@ -22,6 +22,7 @@ export const SearchButton = styled.button`
   cursor: pointer;
   background-color: transparent;
   border: none;
+  color: ${({ searchChoice }) => (searchChoice ? "#DEA264" : "white")};
   &:hover {
     color: ${({ theme }) => theme.SecondaryColor};
   }
