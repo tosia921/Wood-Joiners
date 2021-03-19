@@ -11,34 +11,37 @@ export default () => (
   <StaticQuery
     query={graphql`
       query FeaturedProjectData {
-        allContentfulProject(limit: 3, filter: { featured: { eq: true } }) {
-          edges {
-            node {
-              id
-              featuredImage {
-                description
-                fluid(maxWidth: 300, quality: 85) {
-                  src
-                  ...GatsbyContentfulFluid
+          allSanityProject(filter: {featured: {eq: true}}, limit: 3) {
+            edges {
+              node {
+                id
+                slug {
+                  current
                 }
-              }
-              title
-              slug
+                title
+                featuredimage {
+                  asset {
+                    fluid(maxWidth: 300) {
+                      src
+                  }
             }
+            alt
           }
         }
       }
-    `}
+    }
+  }
+`}
     render={data => (
       <ProjectsContainer>
-        {data.allContentfulProject.edges.map(edge => (
+        {data.allSanityProject.edges.map(edge => (
           <ProjectDiv
             key={edge.node.id}
-            onClick={() => navigate(`/projects/${edge.node.slug}`)}
+            onClick={() => navigate(`/projects/${edge.node.slug.current}`)}
             style={{
-              backgroundImage: `url(${edge.node.featuredImage.fluid.src})`,
+              backgroundImage: `url(${edge.node.featuredimage.asset.fluid.src})`,
             }}
-            title={edge.node.featuredImage.description}
+            title={edge.node.featuredimage.alt}
           >
             <TitleDiv>
               <ProjectTitle>{edge.node.title}</ProjectTitle>

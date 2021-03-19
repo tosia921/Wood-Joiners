@@ -6,16 +6,19 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   // Query for markdown nodes to use in creating pages.
   const result = await graphql(
     `
-      {
-        allContentfulProject {
-          edges {
-            node {
-              id
-              slug
+    {
+      allSanityProject {
+        edges {
+          node {
+            id
+            slug {
+              current
             }
           }
         }
       }
+    }
+    
     `
   )
   // Handle errors
@@ -25,8 +28,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
   // Create pages for each markdown file.
   const ProjectTemplate = path.resolve(`src/templates/project.js`)
-  result.data.allContentfulProject.edges.forEach(({ node }) => {
-    const path = `projects/${node.slug}`
+  result.data.allSanityProject.edges.forEach(({ node }) => {
+    const path = `projects/${node.slug.current}`
     createPage({
       path,
       component: ProjectTemplate,
