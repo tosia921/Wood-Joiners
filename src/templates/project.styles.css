@@ -1,18 +1,41 @@
-.bold {
+strong {
   font-weight: bold;
-  font-size: inherit;
+  font-size: 2rem;
   color: inherit;
   text-shadow: inherit;
+  color: white;
 }
-.italic {
+em {
   font-style: italic;
   font-size: inherit;
   color: inherit;
   text-shadow: inherit;
+  color: white;
 }
-.underline {
+underline {
   text-decoration: underline;
   font-size: inherit;
   color: inherit;
   text-shadow: inherit;
+  color: white;
+}
+
+h1 {
+  font-size: 5rem;
+  color: white;
+}
+
+p {
+  font-size: 3rem;
+  color: white;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.content-container{
+  display: flex;
+  flex-direction: column;
 }

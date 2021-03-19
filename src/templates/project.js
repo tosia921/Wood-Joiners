@@ -1,33 +1,47 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Img from 'gatsby-image';
+
+import Img from 'gatsby-image'
+import "./project.styles.css"
 // import { renderRichText } from "gatsby-source-contentful/rich-text"
 // import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 
 import Layout from "../components/layout"
+import BlockContent from '@sanity/block-content-to-react';
 
-import "./project.styles.css"
-import {
-  StyledImg,
-  StyledPTag,
-  StyledH1,
-  StyledH2,
-  StyledH3,
-  StyledH4,
-  StyledH5,
-  StyledH6,
-} from "./project.styles"
+
+// import {
+//   StyledImg,
+//   StyledPTag,
+//   StyledH1,
+//   StyledH2,
+//   StyledH3,
+//   StyledH4,
+//   StyledH5,
+//   StyledH6,
+// } from "./project.styles"
+// import { serializers } from "@sanity/block-content-to-react/lib/targets/dom";
+
+const serializers = {
+  types: {
+    code: props => (
+      <pre data-language={props.node.language}>
+        <code>{props.node.code}</code>
+      </pre>
+    )
+  }
+}
 
 function ProjectTemplate({ data }) {
  
-  const { title, slug, featuredimage } = data.sanityProject
+  const { title, slug, featuredimage, _rawBody, asset } = data.sanityProject
+
+ 
 
   return (
     <div>
       <Layout>
-        <StyledH1>{title}</StyledH1>
-        <StyledH1>{slug.current}</StyledH1>
-        <Img fluid={featuredimage.asset.fluid}/>
+          <BlockContent blocks={_rawBody} serializers={serializers} />
       </Layout>
     </div>
   )
@@ -41,17 +55,18 @@ export const query = graphql`
       _createdAt(formatString: "DD/MM/Y")
       id
       featured
-      _rawBody
+      _rawBody(resolveReferences: {maxDepth: 10})
       title
       slug {
         current
       }
       featuredimage {
         asset {
-          fluid(maxWidth: 600) {
-            ...GatsbySanityImageFluid
+          fluid(maxWidth: 400) {
+          ...GatsbySanityImageFluid
           }
         }
+      alt
       }
     }
   }
