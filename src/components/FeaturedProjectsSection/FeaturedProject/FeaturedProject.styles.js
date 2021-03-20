@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import Img from 'gatsby-image';
 
 export const ProjectsContainer = styled.div`
   width: 100%;
@@ -22,6 +23,12 @@ export const TitleDiv = styled.div`
   align-items: center;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+`
+
+export const StyledImg = styled(Img)`
+  height: 30rem;
+  border-radius: 20px;
+  box-shadow: ${({ theme }) => theme.ButtonBoxShadow};
 `
 
 export const ProjectTitle = styled.h3`

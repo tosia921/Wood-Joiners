@@ -1,11 +1,17 @@
-import React from "react"
-import { graphql, navigate, StaticQuery } from "gatsby"
+import React from "react";
+import { graphql, navigate, StaticQuery } from "gatsby";
 import {
   ProjectsContainer,
   ProjectDiv,
   ProjectTitle,
   TitleDiv,
-} from "./FeaturedProject.styles"
+  StyledImg
+} from "./FeaturedProject.styles";
+
+
+// style={{
+//   backgroundImage: `url(${edge.node.featuredimage.asset.fluid.src})`,
+// }}
 
 export default () => (
   <StaticQuery
@@ -22,7 +28,7 @@ export default () => (
                 featuredimage {
                   asset {
                     fluid(maxWidth: 300) {
-                      src
+                      ...GatsbySanityImageFluid
                   }
             }
             alt
@@ -38,11 +44,9 @@ export default () => (
           <ProjectDiv
             key={edge.node.id}
             onClick={() => navigate(`/projects/${edge.node.slug.current}`)}
-            style={{
-              backgroundImage: `url(${edge.node.featuredimage.asset.fluid.src})`,
-            }}
             title={edge.node.featuredimage.alt}
           >
+            <StyledImg fluid={edge.node.featuredimage.asset.fluid}/>
             <TitleDiv>
               <ProjectTitle>{edge.node.title}</ProjectTitle>
             </TitleDiv>
@@ -52,3 +56,4 @@ export default () => (
     )}
   />
 )
+

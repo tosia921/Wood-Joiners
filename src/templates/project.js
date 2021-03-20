@@ -2,25 +2,16 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Img from 'gatsby-image'
+import { getFluidGatsbyImage } from 'gatsby-source-sanity'
 import "./project.styles.css"
-// import { renderRichText } from "gatsby-source-contentful/rich-text"
-// import { BLOCKS, MARKS } from "@contentful/rich-text-types"
 
 import Layout from "../components/layout"
 import BlockContent from '@sanity/block-content-to-react';
 
 
-// import {
-//   StyledImg,
-//   StyledPTag,
-//   StyledH1,
-//   StyledH2,
-//   StyledH3,
-//   StyledH4,
-//   StyledH5,
-//   StyledH6,
-// } from "./project.styles"
-// import { serializers } from "@sanity/block-content-to-react/lib/targets/dom";
+import {StyledDatePosted, StyledTitle, PageContainer } from "./project.styles"
+
+const sanityConfig = {projectId: 'kwb289yk', dataset: 'production'}
 
 const serializers = {
   types: {
@@ -28,22 +19,28 @@ const serializers = {
       <pre data-language={props.node.language}>
         <code>{props.node.code}</code>
       </pre>
-    )
-  }
-}
+    ),
+    addimage: props => {
+      const fluidProps = getFluidGatsbyImage(props.node.asset, {maxWidth: 1024}, sanityConfig);
+
+      return <Img className ='Img-styles' fluid={fluidProps} />
+    },
+  },
+};
 
 function ProjectTemplate({ data }) {
  
-  const { title, slug, featuredimage, _rawBody, asset } = data.sanityProject
-
- 
+  const { title, _rawBody, _createdAt} = data.sanityProject
 
   return (
-    <div>
-      <Layout>
-          <BlockContent blocks={_rawBody} serializers={serializers} />
-      </Layout>
-    </div>
+    <Layout>
+      <PageContainer>
+        <StyledTitle>{title}</StyledTitle>
+        <div className='line-breaker'/>
+        <BlockContent blocks={_rawBody} serializers={serializers} />
+        <StyledDatePosted>{_createdAt}</StyledDatePosted>
+      </PageContainer>
+    </Layout>
   )
 }
 
@@ -53,21 +50,8 @@ export const query = graphql`
   query($id: String!) {
     sanityProject(id: {eq: $id}) {
       _createdAt(formatString: "DD/MM/Y")
-      id
-      featured
       _rawBody(resolveReferences: {maxDepth: 10})
       title
-      slug {
-        current
-      }
-      featuredimage {
-        asset {
-          fluid(maxWidth: 400) {
-          ...GatsbySanityImageFluid
-          }
-        }
-      alt
-      }
     }
   }
 `

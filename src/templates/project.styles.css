@@ -12,6 +12,11 @@ em {
   text-shadow: inherit;
   color: white;
 }
+ul {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 2rem;
+}
 underline {
   text-decoration: underline;
   font-size: inherit;
@@ -21,21 +26,68 @@ underline {
 }
 
 h1 {
+  font-size: 6rem;
+  color: white;
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 4px #000;
+}
+h2 {
   font-size: 5rem;
   color: white;
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 4px #000;
+}
+h3 {
+  font-size: 4rem;
+  color: white;
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 4px #000;
+}
+h4 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 3rem;
+  text-shadow: 3px 3px 4px #000;
 }
 
 p {
   font-size: 3rem;
   color: white;
+  text-shadow: 2px 2px 3px #000;
 }
-img {
+
+a {
+  font-size: inherit;
+  color: inherit;
+  text-decoration: underline;
+}
+a:hover {
+  color: lightblue;
+  text-decoration: underline;
+}
+.Img-styles {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  margin-top: 3rem;
+  width: 70%;
+  border: 2px solid #fff;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 }
-.content-container{
+.content-container {
   display: flex;
   flex-direction: column;
+}
+.centered-subtitle {
+  display: block;
+  text-align: center;
+}
+.line-breaker {
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 4rem;
+  box-shadow: 2px 2px 5px #000;
 }
