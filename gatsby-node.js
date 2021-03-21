@@ -17,6 +17,14 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      allSanityCategory {
+        edges {
+          node {
+            id
+            Category
+          }
+        }
+      }
     }
     
     `
@@ -37,6 +45,20 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // as a GraphQL variable to query for data from the markdown file.
       context: {
         id: node.id,
+      },
+    })
+  })
+
+  const categoryTemplate = path.resolve(`src/pages/projects.js`)
+  result.data.allSanityCategory.edges.forEach(({ node }) => {
+    const path = `category/${node.Category}`
+    createPage({
+      path,
+      component: categoryTemplate,
+      // In your blog post template's graphql query, you can use pagePath
+      // as a GraphQL variable to query for data from the markdown file.
+      context: {
+        category: node.Category,
       },
     })
   })

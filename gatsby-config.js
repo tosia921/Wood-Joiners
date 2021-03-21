@@ -11,7 +11,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
-    `@contentful/gatsby-transformer-contentful-richtext`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -51,13 +50,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-remark-line-breaks`,
-    {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: process.env.SPACE_ID,
-        accessToken: process.env.API_KEY,
-      },
-    },
     {
       resolve: `gatsby-source-sanity`,
       options: {

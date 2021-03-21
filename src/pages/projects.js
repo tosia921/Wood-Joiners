@@ -5,14 +5,16 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import ProjectList from '../components/ProjectsList/ProjectList.component';
+import ProjectsFilter from "../components/ProjectsFilter/ProjectsFilter.component";
 
-const Projects = ({ data }) => {
+const Projects = ({ data, pageContext }) => {
 
   const projects = data.allSanityProject.edges;
 
   return (
     <Layout>
       <SEO title="projects" />
+      <ProjectsFilter activeCategory={pageContext.category}/>
       <ProjectList projects={projects}/>
     </Layout>
   )
@@ -21,8 +23,8 @@ const Projects = ({ data }) => {
 export default Projects
 
 export const query = graphql`
-  query ProjectQuery {
-    allSanityProject {
+  query ProjectQuery ($category: String){
+    allSanityProject(filter: {categories: {Category: {eq: $category}}}) {
     edges {
       node {
         title
