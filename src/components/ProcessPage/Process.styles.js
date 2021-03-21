@@ -45,26 +45,36 @@ export const ImgContainer1 = styled(motion.img)`
   height: 80%;
   width: 80%;
   object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.7);
 `
 export const ImgContainer2 = styled(motion.img)`
   height: 80%;
   width: 80%;
   object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.7);
 `
 export const ImgContainer3 = styled(motion.img)`
   height: 80%;
   width: 80%;
   object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.7);
 `
 export const ImgContainer4 = styled(motion.img)`
   height: 80%;
   width: 80%;
   object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.7);
 `
 export const ImgContainer5 = styled(motion.img)`
   height: 80%;
   width: 80%;
   object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.7);
 `
 ///////////////Image containers
 

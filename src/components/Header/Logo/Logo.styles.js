@@ -31,4 +31,8 @@ export const StyledLogo = styled(Link)`
   transform: translate(-45%, -50%);
   text-decoration: none;
   cursor: pointer;
+  &:hover{
+    text-decoration: none;
+    color: ${({ theme }) => theme.PrimaryTextColor};
+  }
 `

@@ -47,7 +47,7 @@ export const StyledPtag = styled.p`
 `
 export const StyledPtag2 = styled(StyledPtag)`
   margin: 1rem 0;
-  font-size: 3rem;
+  font-size: 4rem;
   letter-spacing: 0;
 `
 

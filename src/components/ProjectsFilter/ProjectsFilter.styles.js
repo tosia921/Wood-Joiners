@@ -13,9 +13,9 @@ export const CategoriesStyles = styled.div`
         display: grid;
         grid-template-columns: auto 1fr;
         grid-gap: 0 1rem;
-        padding: 5px;
+        padding: 4px 20px;
         background: ${({ theme }) => theme.SecondaryColor};
-        border-radius: 5px;
+        border-radius: 15px;
         box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
         align-items: center;
         text-shadow: ${({ theme }) => theme.TextShadowBig};

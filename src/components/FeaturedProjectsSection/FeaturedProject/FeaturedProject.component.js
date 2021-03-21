@@ -17,7 +17,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query FeaturedProjectData {
-          allSanityProject(filter: {featured: {eq: true}}, limit: 3) {
+        allSanityProject(filter: {featured: {eq: true}, publishedAt: {}}, limit: 3, sort: {order: DESC, fields: _createdAt}) {
             edges {
               node {
                 id
