@@ -1,5 +1,7 @@
 import React from "react"
-import pic1 from "../../images/HeroSliderImages/pic1.jpg"
+import { useStaticQuery, graphql } from "gatsby";
+
+
 
 import {
   SectionContainer,
@@ -19,6 +21,31 @@ import { fadeInOutOnScroll } from "../../framerMotionAnimations/animation"
 import { useScroll } from "../../framerMotionAnimations/useScroll"
 
 const AboutUs = () => {
+
+  const data = useStaticQuery(graphql`
+    query AboutUsImagesQuery {
+      image1: file(relativePath: { eq: "AboutUsImage1.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 1000){
+            ...GatsbyImageSharpFluid
+          }
+        } 
+      }
+      image2: file(relativePath: { eq: "AboutUsImage2.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 1000) {
+            ...GatsbyImageSharpFluid
+          }
+        } 
+      }
+    }
+`)
+
+const AboutUsImage1 = data.image1.childImageSharp.fluid
+const AboutUsImage2 = data.image2.childImageSharp.fluid
+
+console.log(AboutUsImage1, AboutUsImage2)
+
   const [element, controls] = useScroll()
   return (
     <SectionContainer
@@ -42,8 +69,8 @@ const AboutUs = () => {
             typesetting.Ipsum.
           </StyledText>
         </TextArea1>
-        <StyledImg1 src={pic1} alt="bal bla" />
-        <StyledImg2 src={pic1} alt="bla blae" />
+        <StyledImg1 fluid={AboutUsImage1} alt="bal bla" />
+        <StyledImg2 fluid={AboutUsImage2} alt="bla blae" />
         <TextArea2>
           <StyledH3>ALWAYS CUSTOMER FOCUSED</StyledH3>
           <StyledText>

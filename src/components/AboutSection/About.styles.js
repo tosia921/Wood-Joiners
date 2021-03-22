@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import AboutUsBanner from "../../images/SectionBanners/sectionbanner1.png"
+import Img from 'gatsby-image';
 
 //Animations
 import { motion } from "framer-motion"
@@ -82,18 +83,18 @@ export const StyledText = styled.p`
   }
 `
 
-export const StyledImg1 = styled.img`
+export const StyledImg1 = styled(Img)`
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   grid-area: StyledImg1;
   border: solid 2px white;
 `
 
-export const StyledImg2 = styled.img`
+export const StyledImg2 = styled(Img)`
   display: block;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   grid-area: StyledImg2;
   border: solid 2px white;
 `
