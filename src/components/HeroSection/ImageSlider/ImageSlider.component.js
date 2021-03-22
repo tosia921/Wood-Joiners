@@ -1,43 +1,71 @@
 import React from "react"
-
+import { useStaticQuery, graphql } from "gatsby";
+import Img from 'gatsby-image';
+//styles
 import { StyledImageSlider } from "./ImageSlider.styles"
-
+// bootstrao carousel
 import { Carousel } from "react-bootstrap"
-
+// isnide slider text component
 import HeroText from "../HeroText/HeroText.component"
-
-import pic1 from "../../../images/HeroSliderImages/pic1.jpg"
-import pic2 from "../../../images/HeroSliderImages/pic2.jpg"
-import pic3 from "../../../images/HeroSliderImages/pic3.jpg"
-
 //Animations
 import { pageAnimation } from "../../../framerMotionAnimations/animation"
 
 const ImageSlider = () => {
+  
+  const data = useStaticQuery(graphql`
+    query SliderImagesQuery {
+      image1: file(relativePath: { eq: "slider1.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 1400){
+            ...GatsbyImageSharpFluid
+          }
+        } 
+      }
+      image2: file(relativePath: { eq: "slider2.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 1400) {
+            ...GatsbyImageSharpFluid
+          }
+        } 
+      }
+      image3: file(relativePath: { eq: "slider3.jpg"}) {
+        childImageSharp {
+          fluid(maxWidth: 1400) {
+            ...GatsbyImageSharpFluid
+          }
+        } 
+      }
+    }
+`)
+
+const SliderImage1 = data.image1.childImageSharp.fluid
+const SliderImage2 = data.image2.childImageSharp.fluid
+const SliderImage3 = data.image3.childImageSharp.fluid
+
   return (
     <StyledImageSlider variants={pageAnimation} initial="hidden" animate="show">
       <Carousel style={{ "border-radius": "10px", overflow: "hidden" }}>
         <Carousel.Item>
-          <img
+          <Img
+            fluid={SliderImage1}
             style={{ height: "42rem" }}
             className="d-block w-100"
-            src={pic1}
             alt="This is first Slider"
           />
         </Carousel.Item>
         <Carousel.Item>
-          <img
+          <Img
+            fluid={SliderImage2}
             style={{ height: "42rem" }}
             className="d-block w-100"
-            src={pic2}
             alt="This is first Slider"
           />
         </Carousel.Item>
         <Carousel.Item>
-          <img
+          <Img
+            fluid={SliderImage3}
             style={{ height: "42rem" }}
             className="d-block w-100"
-            src={pic3}
             alt="This is first Slider"
           />
         </Carousel.Item>
