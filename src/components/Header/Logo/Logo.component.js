@@ -5,7 +5,7 @@ import { LogoContainer, StyledLogo } from "./Logo.styles"
 const Logo = () => {
   return (
     <LogoContainer>
-      <StyledLogo>MJ Joiners</StyledLogo>
+      <StyledLogo to='/'>MJ Joiners</StyledLogo>
     </LogoContainer>
   )
 }

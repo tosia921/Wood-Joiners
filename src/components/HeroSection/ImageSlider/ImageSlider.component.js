@@ -44,7 +44,7 @@ const SliderImage3 = data.image3.childImageSharp.fluid
 
   return (
     <StyledImageSlider variants={pageAnimation} initial="hidden" animate="show">
-      <Carousel style={{ "border-radius": "10px", overflow: "hidden" }}>
+      <Carousel style={{ "borderRadius": "10px", overflow: "hidden" }}>
         <Carousel.Item>
           <Img
             fluid={SliderImage1}

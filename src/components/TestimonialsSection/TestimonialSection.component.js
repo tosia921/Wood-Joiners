@@ -76,7 +76,7 @@ const TestimonialSection = () => {
         target="_blank"
         href="http://www.ratedpeople.com"
         rel="noreferrer"
-        style={{ "text-decoration": "none" }}
+        style={{ "textDecoration": "none" }}
       >
         <RatedPeopleContainer>
           <RatedPeopleLogo />

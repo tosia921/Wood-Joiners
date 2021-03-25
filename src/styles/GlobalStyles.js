@@ -1,5 +1,5 @@
 import { createGlobalStyle } from "styled-components"
-import bodyBackground from "../../images/wooden-background.jpg"
+import bodyBackground from "../images/wooden-background.jpg"
 
 const GlobalStyles = createGlobalStyle`
   body {

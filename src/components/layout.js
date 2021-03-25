@@ -1,7 +1,7 @@
 import React from "react"
 import { ThemeProvider } from "styled-components"
-import GlobalStyles from "./styles/GlobalStyles"
-import { theme } from "./styles/theme"
+import GlobalStyles from "../styles/GlobalStyles"
+import { theme } from "../styles/theme"
 import "bootstrap/dist/css/bootstrap.min.css"
 
 import { PageWrapper, StyledMain } from "./layout.style"

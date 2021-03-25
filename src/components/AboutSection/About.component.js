@@ -2,7 +2,6 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby";
 
 
-
 import {
   SectionContainer,
   SectionBanner,
@@ -43,8 +42,6 @@ const AboutUs = () => {
 
 const AboutUsImage1 = data.image1.childImageSharp.fluid
 const AboutUsImage2 = data.image2.childImageSharp.fluid
-
-console.log(AboutUsImage1, AboutUsImage2)
 
   const [element, controls] = useScroll()
   return (
