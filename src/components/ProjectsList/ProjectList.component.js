@@ -7,10 +7,9 @@ const SingleProject = ({ project }) => {
         <ProjectStyles>
             <ProjectLink to={`/projects/${project.node.slug.current}`}>
                 <ProjectTitle>{project.node.title}</ProjectTitle>
+                <ProjectCategory>{project.node.categories.Category}</ProjectCategory>
+                <ProjectImage fluid={project.node.featuredimage.asset.fluid} alt={project.node.title}/>
             </ProjectLink>
-            <ProjectCategory>{project.node.categories.Category}</ProjectCategory>
-            <ProjectImage fluid={project.node.featuredimage.asset.fluid} alt={project.node.title}/>
-            
         </ProjectStyles>
     )
 }
