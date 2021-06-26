@@ -7,13 +7,7 @@ import {
   StyledCarousel,
   StyledCarouselItem,
   CustomerComment,
-  CustomerName,
-  RatedPeopleLogo,
-  Stars,
-  StarSVG,
-  RatedPeopleContainer,
-  RatedPeopleText,
-  StyledPtag2,
+  CustomerName
 } from "./TestimonialSection.styles"
 
 //Animations
