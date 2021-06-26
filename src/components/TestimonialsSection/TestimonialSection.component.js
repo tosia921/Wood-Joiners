@@ -50,7 +50,7 @@ const TestimonialSection = () => {
             vehicula aliquet odio, eu maximus dolor gravida eu. Cras luctus
             pharetra risus eu interdum.
           </CustomerComment>
-          <CustomerName>Tomasz Posiadala</CustomerName>
+          <CustomerName>John Smith</CustomerName>
         </StyledCarouselItem>
         <StyledCarouselItem>
           <CustomerComment>
@@ -62,27 +62,6 @@ const TestimonialSection = () => {
           <CustomerName>Amy Wine</CustomerName>
         </StyledCarouselItem>
       </StyledCarousel>
-
-      <StyledPtag2>CHECK OUR AMAZING</StyledPtag2>
-      <Stars>
-        <StarSVG />
-        <StarSVG />
-        <StarSVG />
-        <StarSVG />
-        <StarSVG />
-      </Stars>
-      <StyledPtag2>RATING AND COMMENTS AT:</StyledPtag2>
-      <a
-        target="_blank"
-        href="http://www.ratedpeople.com"
-        rel="noreferrer"
-        style={{ "textDecoration": "none" }}
-      >
-        <RatedPeopleContainer>
-          <RatedPeopleLogo />
-          <RatedPeopleText>ratedpeople.com</RatedPeopleText>
-        </RatedPeopleContainer>
-      </a>
     </SectionContainer>
   )
 }
