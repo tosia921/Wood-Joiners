@@ -18,7 +18,7 @@ export const CategoriesStyles = styled.div`
         border-radius: 15px;
         box-shadow: 5px 5px 20px rgba(0,0,0,0.5);
         align-items: center;
-        text-shadow: ${({ theme }) => theme.TextShadowBig};
+        text-shadow: 3px 3px 10px rgba(0,0,0,0.5);
         letter-spacing: 0.5px;
 
         .count {

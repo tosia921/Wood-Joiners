@@ -12,9 +12,7 @@ export const ProjectGridStyles = styled.div`
 `
 
 export const ProjectStyles = styled.div`
-    display: grid;
-    grid-template-rows: auto auto 300px;
-    grid-gap: 1rem;
+    
     border-radius: 20px;
     background-color: rgba(255,255,255, 0.25);
     padding: 1rem;
@@ -34,6 +32,9 @@ export const ProjectLink = styled(Link)`
     font-size: 4rem;
     margin-bottom: 0;
     text-decoration: none;
+    display: grid;
+    grid-template-rows: auto auto 300px;
+    grid-gap: 1rem;
     &:hover {
         text-decoration: none;
         color: #DEA264;
