@@ -1,6 +1,10 @@
 import React from "react"
 
-import Img1 from "../../images/wooden-background.jpg"
+import step1 from '../../images/step1.jpg'
+import step2 from "../../images/step2.jpg"
+import step3 from "../../images/step3.jpg"
+import step4 from "../../images/step4.jpg"
+import step5 from "../../images/step5.jpg"
 import {
   GridContainer,
   ImgContainer1,
@@ -38,8 +42,8 @@ const Process = () => {
           the release of Letraset sheets containing Lorem Ipsum passages.
         </StyledPtag>
       </TextArea1>
-      <ImgContainer1 src={Img1} alt="aaa" variants={item} />
-      <ImgContainer2 src={Img1} alt="aaa" variants={item} />
+      <ImgContainer1 src={step1} alt="aaa" variants={item} />
+      <ImgContainer2 src={step2} alt="aaa" variants={item} />
       <TextArea2 variants={item}>
         <WoodContainer>
           <StyledNum>2</StyledNum>
@@ -68,8 +72,8 @@ const Process = () => {
           the release of Letraset sheets containing Lorem Ipsum passages.
         </StyledPtag>
       </TextArea3>
-      <ImgContainer3 src={Img1} alt="aaa" variants={item} />
-      <ImgContainer4 src={Img1} alt="aaa" variants={item} />
+      <ImgContainer3 src={step3} alt="aaa" variants={item} />
+      <ImgContainer4 src={step4} alt="aaa" variants={item} />
       <TextArea4 variants={item}>
         <WoodContainer>
           <StyledNum>4</StyledNum>
@@ -98,7 +102,7 @@ const Process = () => {
           the release of Letraset sheets containing Lorem Ipsum passages.
         </StyledPtag>
       </TextArea5>
-      <ImgContainer5 src={Img1} alt="aaa" variants={item} />
+      <ImgContainer5 src={step5} alt="aaa" variants={item} />
     </GridContainer>
   )
 }

@@ -112,9 +112,9 @@ const Contact = () => {
           )}
         </ContactForm>
         <ContactDetails>
-          <Name>MJ Joiners</Name>
-          <Email>mj.joiners@gmx.com</Email>
-          <Phone>Phone: 0 7411 416 335</Phone>
+          <Name>Wood Joiners</Name>
+          <Email>wood.joiners@gmail.com</Email>
+          <Phone>Phone: 0 700 800 900</Phone>
         </ContactDetails>
       </SectionContent>
     </ContactSection>
