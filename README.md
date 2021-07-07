@@ -30,7 +30,7 @@ This is a website designed and developed for a wood renovation business. Designe
 
 This is a screenshot of a Sanity CMS that allow user to add projects categories and projects related to those categories that are later displayed on a website. Each time user adds new content or edits existing one, netlify webhook is triggered and Gatsby site gets rebuild.
 
-![](.j.m.pietrzykowski@gmail.com)
+![](./sanityproject.png)
 
 ## My process
 
