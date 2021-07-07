@@ -52,12 +52,10 @@ const ProjectsFilter = ({ activeCategory }) => {
             }
         }
     `);
-    console.clear();
-    console.log({allSanityCategory})
-    console.log({allSanityProject})
+
     //Count how many Projects is in each category
     const categoriesWithCounts = countProjectsInCategories(allSanityProject.edges)
-    console.log(categoriesWithCounts)
+
     //loop over and display categories and the count of projects in each category
     return (
         <CategoriesStyles>

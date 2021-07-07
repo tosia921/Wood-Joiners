@@ -7,41 +7,20 @@ This is a website designed and developed for a wood renovation business. Designe
 - [WoodJoiners Website](#woodjoiners-website)
   - [Table of contents](#table-of-contents)
   - [Overview](#overview)
-    - [The challenge](#the-challenge)
     - [Links](#links)
     - [Website Screenshot](#website-screenshot)
     - [Sanity CMS Screenshot's](#sanity-cms-screenshots)
   - [My process](#my-process)
     - [Built with](#built-with)
     - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
   - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
-    
-  - [My process](#my-process)
-    - [Built with](#built-with)
-    - [What I learned](#what-i-learned)
-    - [Continued development](#continued-development)
-    - [Useful resources](#useful-resources)
-  - [Author](#author)
-  - [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
-
-### The challenge
-
-Users should be able to:
-
-- View the optimal layout for each page depending on their device's screen size
-- See hover states for all interactive elements throughout the site
 
 ### Links
 
 - Website URL: [Wood Joiners](https://woodjoiners.netlify.app)
-- Sanity CMS Hithub URL: [Sanity Github](https://github.com/tosia921/Wood-Joiners-Sanity-CMS)
+- Sanity CMS Github URL: [Sanity Github](https://github.com/tosia921/Wood-Joiners-Sanity-CMS)
 
 ### Website Screenshot
 
@@ -53,8 +32,6 @@ This is a screenshot of a Sanity CMS that allow user to add projects categories 
 
 ![](.j.m.pietrzykowski@gmail.com)
 
-
-
 ## My process
 
 ### Built with
@@ -64,56 +41,88 @@ This is a screenshot of a Sanity CMS that allow user to add projects categories 
 - CSS Grid
 - [React](https://reactjs.org/) - JS library
 - [Gatsby.js](https://www.gatsbyjs.com/) - React framework
-- [Sanity CMS](https://www.sanity.io/) - For managing website content 
+- [Sanity CMS](https://www.sanity.io/) - For managing website content
 - [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+- How to use Gatsby plugins system.
 
-To see how you can add code snippets, see below:
+- How to query for internal and external data in Gatsby using GraphQL.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
+- How to use Gatsby image component for optimizing and lazy loading.
+
+- How to dynamicly create static pages in Gatsby:
+
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+const path = require("path")
+// Implement the Gatsby API “createPages”. This is called once the
+// data layer is bootstrapped to let plugins create pages from data.
+exports.createPages = async ({ graphql, actions, reporter }) => {
+  const { createPage } = actions
+  // Query for markdown nodes to use in creating pages.
+  const result = await graphql(
+    `
+    {
+      allSanityProject {
+        edges {
+          node {
+            id
+            slug {
+              current
+            }
+          }
+        }
+      }
+      allSanityCategory {
+        edges {
+          node {
+            id
+            Category
+          }
+        }
+      }
+    }
+
+    `
+  )
+  // Handle errors
+  if (result.errors) {
+    reporter.panicOnBuild(`Error while running GraphQL query.`)
+    return
+  }
+  // Create pages for each markdown file.
+  const ProjectTemplate = path.resolve(`src/templates/project.js`)
+  result.data.allSanityProject.edges.forEach(({ node }) => {
+    const path = `projects/${node.slug.current}`
+    createPage({
+      path,
+      component: ProjectTemplate,
+      // In your blog post template's graphql query, you can use pagePath
+      // as a GraphQL variable to query for data from the markdown file.
+      context: {
+        id: node.id,
+      },
+    })
+  })
+
+  const categoryTemplate = path.resolve(`src/pages/projects.js`)
+  result.data.allSanityCategory.edges.forEach(({ node }) => {
+    const path = `category/${node.Category}`
+    createPage({
+      path,
+      component: categoryTemplate,
+      // In your blog post template's graphql query, you can use pagePath
+      // as a GraphQL variable to query for data from the markdown file.
+      context: {
+        category: node.Category,
+      },
+    })
+  })
+}
 }
 ```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
-
-### Continued development
-
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
-
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Tomasz Posiadala - [Tomasz Posiadala](https://www.tomaszposiadala.com)
